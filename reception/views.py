@@ -66,7 +66,7 @@ def send_letter(request, visitor_id):
 # Sends a welcome email to a visitor."""
     visitor = Visitor.objects.get(pk=visitor_id)
     subject = 'Welcome to [Your Company Name]'
-    message = f"Dear {visitor.name},\n\nThank you for visiting us today. We appreciate your interest in [Your Company Name].\n\nSincerely,\n[Your Company Name]"
+    message = f"Dear {visitor.name},\n\nThank you for visiting us. We appreciate your interest in [Your Company Name].\n\nSincerely,\n[Your Company Name]"
     from_email = 'your_email@example.com'
     recipient_list = [visitor.email]
     send_mail(subject, message, from_email, recipient_list)
