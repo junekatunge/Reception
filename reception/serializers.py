@@ -10,8 +10,10 @@ class VisitorSerializer(serializers.ModelSerializer):
             
             
 class LetterSerializer(serializers.ModelSerializer):
+    
+    attachment = serializers.FileField(required=False, allow_null=True)  # Added attachment field to serializer
    
-        class Meta:
-            model = Letter
-            fields = '__all__'
+    class Meta:
+        model = Letter
+        fields = '__all__'
     

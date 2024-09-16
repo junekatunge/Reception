@@ -133,4 +133,5 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'jkatunge13@gmail.com'
 EMAIL_HOST_PASSWORD = 'Ngandi2135#'
 EMAIL_USE_TLS = True
-EMAIL_SSL_CERT_VALIDATION = False  # due to testing
+DEFAULT_FROM_EMAIL = 'jkatunge13@gmail.com'
+# EMAIL_SSL_CERT_VALIDATION = False  # due to testing
