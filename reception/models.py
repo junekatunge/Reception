@@ -22,6 +22,7 @@ class Letter(models.Model):
     content = models.TextField()
     sent_at = models.DateTimeField(auto_now_add=True)
     is_sent = models.BooleanField(default=False)  # True if sent, False if received
+    attachment = models.FileField(upload_to='letter_attachments/', blank=True, null=True)  # Added attachment field
 
     def __str__(self):
         return f"{self.subject} - {self.visitor.name}"
